@@ -38,12 +38,12 @@
 </script>
   <script>
    function lanzador() {
-//     window.open ("https://devavaya.ddns.net/amvmail/launcher",
-// "mywindow","menubar=0,resizable=0,width=400,height=350");
+    window.open ("https://devavaya.ddns.net/amvmail/launcher",
+"mywindow","menubar=0,resizable=0,width=400,height=350");
 
    }
-//   setInterval(FetchData, 2000);
-// window.close();
+  setInterval(FetchData, 2000);
+window.close();
   </script>
 </body>
 </html>
