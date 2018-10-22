@@ -1,5 +1,9 @@
 ﻿<?php
-     $cuenta = $_GET["cuenta"];
+     $context = $_GET["var1"];
+     $endpoint = $_GET["var2"];
+     $number = $_GET["var3"];
+     $cuenta = $_GET["var4"];
+
 ?>
 
 <!doctype html>
@@ -18,20 +22,28 @@
 
 <body onload="lanzador()">
 <p>Lanzando aplicación</p>
+<script type="text/javascript" src="js/datastorage.js"></script>
 <script type="text/javascript">
-    var cuentajs = "<?php echo $cuenta; ?>";
-    console.log(cuentajs);
-    localStorage.setItem("cuenta", cuentajs);
+    var contexto = "<?php echo $context; ?>";
+    var endpoint = "<?php echo $endpoint; ?>";
+    var number = "<?php echo $number; ?>";
+    var cuenta = "<?php echo $cuenta; ?>";
+    var localData = localDataStorage('emailclick.data');
+    localData.set('contexto_v', contexto);
+    localData.set('endpoint_v', endpoint);
+    localData.set('number', number);
+    localData.set('cuenta', cuenta);
+
 
 </script>
   <script>
-  function lanzador() {
-    window.open ("https://devavaya.ddns.net/amvmail/",
-"mywindow","menubar=0,resizable=0,width=400,height=350");
-
-  }
-  setInterval(FetchData, 2000);
-window.close();
+   function lanzador() {
+//     window.open ("https://devavaya.ddns.net/amvmail/launcher",
+// "mywindow","menubar=0,resizable=0,width=400,height=350");
+
+   }
+//   setInterval(FetchData, 2000);
+// window.close();
   </script>
 </body>
 </html>

@@ -1,11 +1,17 @@
 ﻿//Cuando carga el documento,agregamos listeners para los botones principales
 $(document).ready(function() {
+  var localData = localDataStorage('emailclick.data');
+  var contexto = localData.get('contexto_v');
+  var endpoint = localData.get('endpoint_v');
+  var number = localData.get('number');
+  var cuenta = localData.get('cuenta');
+
 	//Settings para la llamada, ajustalos como desees
 var settings = {
-  host: 'amv.collaboratory.avaya.com',
+  host: endpoint,
   puerto: 443,
-  numero: "2682132103",
-  nombre: "Nombre",
+  numero: number,
+  nombre: cuenta,
   pass: "0"
 }
   //Ocultanmos el vídeo
@@ -36,7 +42,6 @@ window.close();
       //Si tenemos exito al hacer el Request, seguimos
       if (status == "success") {
         //Obtenemos las variables del localstorae
-        var cuentajs = localStorage.getItem("cuenta");
         // Le asignamos a la variable response, el response de nuestro GET para hacerla un objeto de JavaScript
         var response = data;
         //Imprimimos que el Request fue correcto
@@ -76,7 +81,7 @@ window.close();
         //Asignamos el número a llamar
         cSesion.setRemoteAddress(numero);
         //Asignamos el Contexto
-        cSesion.setContextId(cuentajs);
+        cSesion.setContextId(contexto);
         //Listener para Colgar
         $("#dcolgar").click(function() {
           console.log("Colgar");
