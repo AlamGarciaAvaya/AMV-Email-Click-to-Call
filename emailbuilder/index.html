@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="cache-control" content="no-cache" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!--[if IE]>
+      <link rel="shortcut icon" href="img/favicon.ico">
+      <![endif]-->
+      <link rel="icon" href="img/favicon.ico">
+      <title>Email builder</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+         <a class="navbar-brand" href="#">Email builder</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+         </div>
+      </nav>
+      <main role="main">
+         <div class="jumbotron text-center">
+            <div class="container">
+               <h3 class="display-4">Email Builder</h3>
+            </div>
+         </div>
+         <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h4 class="display-5">Entrada</h4>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Cuenta</span>
+                </div>
+                <input type="text" class="form-control" placeholder="1234" id="cuenta-txt">
+              </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Asunto</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Asunto" id="asunto-txt">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Mensaje</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Saludos" id="mensaje-txt">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Firma</span>
+                  </div>
+                  <textarea class="form-control" id="firma-txt" placeholder="Manuel Ramirez | Avaya Engagement Solutions AI | Avaya | Miami, FL 33126 | Voice/voicemail/fax 786-331-0405 | eMail: jlramirez@avaya.com" id="firma-txt" rows="4"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">URL</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="https://devavaya.ddns.net/amvmail/launcher.php?" id="url-txt">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Imagen</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="https://devavaya.ddns.net/amvmail/call.png" id="img-txt">
+                </div>
+                <button type="button" id="gencode-btn" class="btn btn-primary btn-lg btn-block">Generar Código</button>
+                <br>
+                <h4 class="display-5">Codigo HTML</h4>
+                <form>
+                  <div class="input-group mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="12"></textarea>
+                  </div>
+                </form>
+            </div>
+            <div class="col-sm">
+              <h4 class="display-5">Vista Previa</h4>
+              <div id="htmlpreview"></div>
+
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+      <footer class="container">
+         <p>&copy;Avaya 2018</p>
+      </footer>
+
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="js/custom.js"></script>
+   </body>
+</html>
